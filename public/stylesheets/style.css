@@ -1,8 +1,27 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+body > nav {
+  background-color: rgba(131, 103, 42, 0.8);
+  display: flex;
+  align-items: center;
+  padding: 5px 5px 10px 5px;
 }
+
+#leftnav{
+  align-items: center;
+  padding: 5px 5px 10px 5px;
+}
+
+#rightnav {
+  align-items: center;
+  padding: 5px 5px 10px 5px;
+  margin-right: auto;
+}
+
+a {
+  color: rgb(40, 47, 145);
+}
+
