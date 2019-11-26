@@ -5,5 +5,7 @@ module.exports = {
 };
 
 function index(req, res) {
-  res.render('users/index', {title: 'MyBookShelf', user: req.user});
-  }
+
+  
+  res.render('users/index', {title: 'MyBookShelf',user: req.user});
+ }
