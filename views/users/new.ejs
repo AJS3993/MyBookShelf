@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+
+
+  <h2>Enter a New Book</h2>
+  <form action="/library" method="POST">
+
+    <label>Title:
+        <input type="text" name="booktitle">
+      </label><br>
+      
+      
+      <label>Author:
+        <input type="text" name="author">
+      </label><br>
+    
+    <label>Group:
+      <select name="group">
+        <option value="favorite">Favorite</option>
+        <option value="toread">To Read</option>
+        <option value="read">already Read</option>
+      </select>
+    </label><br>
+    
+    
+    <input type="submit" value="Add Book">
+  </form>
+
+  <%- include('../partials/footer') %>

@@ -1,29 +1,31 @@
-body {
-  /* padding: 50px; */
+body{
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/71ol1jY8qQL._SL1024_.jpg");
+  background-size: cover;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 
 body > nav {
   background-color: rgba(131, 103, 42, 0.8);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding:0;
 }
 
-#leftnav{
-  align-items: center;
-  padding: 5px 5px 10px 5px;
-}
 
-#rightnav {
+table{
   align-items: center;
-  padding: 5px 5px 10px 5px;
-  margin-right: auto;
+  text-align: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 a {
-  color: rgb(40, 47, 145);
+  opacity: 0.7;
 }
 
-#heading {
-  font-size: 30px;
+a:hover {
+  opacity: 1;
 }
+

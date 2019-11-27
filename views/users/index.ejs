@@ -14,15 +14,16 @@
     <p id='heading'>My Book Shelf</p>
   </nav>
 
+  <h1>Landing Page</h1>
+
+      <div id="login">
     
-    <ul>
-        <li>
         <% if (user) { %>
           <a href="/logout"><i class="material-icons left"></i>Log Out</a>
         <% } else { %>
           <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
         <% } %>
-        </li>
-      </ul>
+      
+      </div>
     
     <%- include('../partials/footer') %>
