@@ -2,4 +2,27 @@
     
 <h1>Library Page</h1>
 
- <%- include('../partials/footer') %>
+
+<table id='list'>
+<thead>
+  <th></th>
+  <th>Title</th>
+  <th>Author</th>
+  <th>Group</th>
+  <th>Favorite</th>
+</thead>
+<% user.library.forEach(function(user){ %>
+  <tr>
+      <td><form action="/users/<%= user._id %>?_method=DELETE"
+         method="POST">
+        <button type="submit">X</button>
+      </form></td>
+      <td><%= user.Title %></td>
+      <td><%= user.Author %></td>
+      <td><%= user.Group %></td>
+      <td><a href="/users/<%= user._id %>"  id="details">DETAILS</a></td>
+  </tr>
+<% }) %>
+</table>
+
+<%- include('../partials/footer') %>

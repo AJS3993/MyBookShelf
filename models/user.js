@@ -1,18 +1,17 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
 
 
-var librarySchema = new Schema({
-  Title: String,
-  Author: String,
+var librarySchema = new mongoose.Schema({
+  Title: {type: String},
+  Author: {type: String},
   Group: {enum: ['favorite', 'toread', 'read']}
 })
 
 
 var userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  googleId: String,
+  name: {type: String},
+  email: {type: String},
+  googleId: {type: String},
   library: [librarySchema]
 });
 

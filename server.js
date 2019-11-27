@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var libraryRouter = require('./routes/library');
 var settingsRouter = require('./routes/settings');
+var methodOverride = require('method-override');
 
 require('dotenv').config();
 
@@ -34,6 +35,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

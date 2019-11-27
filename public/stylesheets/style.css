@@ -1,5 +1,5 @@
 body{
-  background-image: url("https://images-na.ssl-images-amazon.com/images/I/71ol1jY8qQL._SL1024_.jpg");
+  background-image: url("https://wallpaperaccess.com/full/832901.jpg");
   background-size: cover;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0;
@@ -8,18 +8,13 @@ body{
 }
 
 
-body > nav {
-  background-color: rgba(42, 131, 52, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ nav {
+  background-image: linear-gradient(rgba(27, 80, 33, 0.9), rgba(42, 131, 52, 0.8));
 }
 
 
 table{
-  align-items: center;
   text-align: center;
-  justify-content: space-around;
   width: 100%;
 }
 
@@ -34,6 +29,11 @@ a:hover {
 
 
 td {
+  text-align: center;
   position: relative;
   bottom: 15px;
+}
+
+h1 {
+  text-align: center;
 }

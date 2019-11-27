@@ -1,8 +1,9 @@
-
+var User = require('../models/user');
 
 module.exports = {
   index,
   new: newBook,
+  show,
   create
 };
 
@@ -15,13 +16,22 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
-  var book = new Book(req.body);
-  book.save(function(err) {
-    if (err) return res.render('users/new');
-    console.log(book);
-    res.redirect('/users');
+
+  var user = new User(req.body);
+  user.save(function(err) {
+    if (err) return res.render('/new');
+    console.log(user);
+
+    req.user.library.push(req.body);
+    req.user.save(function(err) {
+      console.log(user)
+
+
+    res.redirect('../users/library');
   });
-}
+})}
+
+
+function show(req, res){
+    res.render('users/library', {user: req.user});
+  }

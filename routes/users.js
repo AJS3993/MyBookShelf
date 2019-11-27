@@ -4,7 +4,8 @@ var usersCtrl = require('../controllers/users');
 
 router.get('/', usersCtrl.index);
 router.get('/new', usersCtrl.new);
-router.post('/', usersCtrl.create);
+router.get('/:id', usersCtrl.show);
+router.post('/:id', usersCtrl.create);
 
 
 
