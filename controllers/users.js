@@ -1,4 +1,4 @@
-const User = require('../models/user');
+
 
 module.exports = {
   index,
@@ -20,8 +20,8 @@ function create(req, res) {
   }
   var book = new Book(req.body);
   book.save(function(err) {
-    if (err) return res.render('flights/new');
-    console.log(flight);
-    res.redirect('/flights');
+    if (err) return res.render('users/new');
+    console.log(book);
+    res.redirect('/users');
   });
 }
