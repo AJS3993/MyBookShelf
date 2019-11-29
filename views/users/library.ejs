@@ -2,27 +2,28 @@
     
 <h1>Library Page</h1>
 
-
-<table id='list'>
+<div id='lib'>
+<table id='libtable'>
 <thead>
   <th></th>
   <th>Title</th>
   <th>Author</th>
   <th>Group</th>
-  <th>Favorite</th>
+  <!-- <th>Favorite</th> -->
 </thead>
-<% user.library.forEach(function(user){ %>
+<% user.library.forEach(function(u){ %>
   <tr>
-      <td><form action="/users/<%= user._id %>?_method=DELETE"
+      <td><form id ='deletebook' action="/users/<%= user._id %>?_method=DELETE"
          method="POST">
         <button type="submit">X</button>
       </form></td>
-      <td><%= user.Title %></td>
-      <td><%= user.Author %></td>
-      <td><%= user.Group %></td>
-      <td><a href="/users/<%= user._id %>"  id="details">DETAILS</a></td>
+      <td><%= u.Title %></td>
+      <td><%= u.Author %></td>
+      <td><%= u.Group %></td>
+      <!-- <td><a href="/users/<%= user._id %>"  id="details">DETAILS</a></td> -->
   </tr>
 <% }) %>
 </table>
+</div>
 
 <%- include('../partials/footer') %>

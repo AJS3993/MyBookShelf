@@ -12,6 +12,7 @@ function index(req, res) {
  })}
 
  function create(req, res) {
+
   
   req.user.library.push(req.body);
   req.user.save(function(err) {
@@ -20,8 +21,10 @@ function index(req, res) {
     });
   }
 
-function show(req, res) {
-  User.findById(req.params.id, function(err, user) {
-    res.render('users/library');
-  });
-  }
+  function show(req, res) {
+    User.findById(req.params.id, function(err, user) {
+      res.render('users/library');
+    });
+    }
+
+   

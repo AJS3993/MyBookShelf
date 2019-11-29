@@ -2,9 +2,16 @@ var mongoose = require('mongoose');
 
 
 var librarySchema = new mongoose.Schema({
-  Title: {type: String},
-  Author: {type: String},
-  Group: {enum: ['favorite', 'toread', 'read']}
+  Title: {
+    type: String
+  },
+  Author: {
+    type: String
+  },
+  Group: {
+    type: String,
+    enum: ['Favorite', 'To Read', 'Read']
+  }
 })
 
 
