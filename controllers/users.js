@@ -9,15 +9,18 @@ module.exports = {
 };
 
 function index(req, res) {
+  console.log('users index')
   res.render('users/index', {user: req.user});
  }
  
  function newBook(req, res) {
+   console.log('users newbook')
   res.render('users/new');
 }
 
 function create(req, res) {
 
+console.log('users create')
 
   var user = new User(req.body);
   user.save(function(err) {
@@ -36,14 +39,21 @@ function create(req, res) {
 
 
 function show(req, res){
+  console.log('users show')
     res.render('users/library', {user: req.user});
   }
 
   function deleteBook(req, res) {
-    User.findById(req.params.id, function(err, user){
-    user.library.deleteOne(function(err) {
-      res.redirect(`../users/library`);
+    console.log('users delete')
+      User.deleteOne(function(err) {
+      res.redirect(`/users/library`);
     })
-  })
   }
   
+  // function deleteFlight(req, res) {
+  //   Flight.findById(req.params.id, function(err, flight){
+  //   flight.deleteOne(function(err) {
+  //     res.redirect(`/flights/`);
+  //   })
+  // })
+  // }

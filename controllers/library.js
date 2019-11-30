@@ -1,14 +1,14 @@
-var User = require('../models/user');
+// var User = require('../models/user');
 
-module.exports = {
-  index
-  // show
-};
+// module.exports = {
+//   index
+//   // show
+// };
 
-function index(req, res) {
-  User.library.find({}, function(err, user) {
-  res.render('users/library');
- })}
+// function index(req, res) {
+//   User.library.find({}, function(err, user) {
+//   res.render('users/library');
+//  })}
 
 
   // function show(req, res) {
