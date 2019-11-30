@@ -31,7 +31,7 @@ a:hover {
 .navtd {
   text-align: center;
   position: relative;
-  bottom: 15px;
+  bottom: 6px;
 }
 
 h1 {
@@ -45,8 +45,8 @@ h1 {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
-  width: 70%;
-   
+  width: 80%;
+  font-size: 15px;
 }
 
 #lib{
@@ -78,4 +78,13 @@ input {
 
 label {
   font-size: 20px;
+}
+
+tr.books:hover{
+  color: rgba(40, 53, 42, 0.8);
+  background-color: greenyellow;
+}
+
+th{
+  text-decoration: underline;
 }

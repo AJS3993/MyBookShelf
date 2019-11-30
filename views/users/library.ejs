@@ -12,7 +12,7 @@
   <!-- <th>Favorite</th> -->
 </thead>
 <% user.library.forEach(function(u){ %>
-  <tr>
+  <tr class='books'>
       <td><form id ='deletebook' action="/users/<%= user._id %>?_method=DELETE"
          method="POST">
         <button type="submit">X</button>

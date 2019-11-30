@@ -1,8 +1,8 @@
-var router = require('express').Router();
-var settingsCtrl = require('../controllers/settings');
+// var router = require('express').Router();
+// var settingsCtrl = require('../controllers/settings');
 
 
-router.get('/settings', settingsCtrl.index);
+// router.get('/settings', settingsCtrl.index);
 
 
-module.exports = router;
+// module.exports = router;

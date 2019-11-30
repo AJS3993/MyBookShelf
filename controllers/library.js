@@ -1,9 +1,8 @@
 var User = require('../models/user');
 
 module.exports = {
-  index,
-  create,
-  show
+  index
+  // show
 };
 
 function index(req, res) {
@@ -11,20 +10,11 @@ function index(req, res) {
   res.render('users/library');
  })}
 
- function create(req, res) {
 
-  
-  req.user.library.push(req.body);
-  req.user.save(function(err) {
-      console.log(user)
-      res.redirect(`/library/${user._id}`);
-    });
-  }
-
-  function show(req, res) {
-    User.findById(req.params.id, function(err, user) {
-      res.render('users/library');
-    });
-    }
+  // function show(req, res) {
+  //   User.findById(req.params.id, function(err, user) {
+  //     res.render('users/library');
+  //   });
+  //   }
 
    

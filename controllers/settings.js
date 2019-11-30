@@ -1,7 +1,7 @@
-module.exports = {
-    index
-  };
+// module.exports = {
+//     index
+//   };
   
-  function index(req, res) {
-    res.render('users/settings');
-   }
+//   function index(req, res) {
+//     res.render('users/settings');
+//    }

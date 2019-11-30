@@ -42,7 +42,7 @@ function show(req, res){
   function deleteBook(req, res) {
     User.findById(req.params.id, function(err, user){
     user.library.deleteOne(function(err) {
-      res.redirect(`/library/`);
+      res.redirect(`../users/library`);
     })
   })
   }
