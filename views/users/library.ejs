@@ -2,14 +2,16 @@
     
 <h1>Library Page</h1>
 
-<h2>You have # books!</h2>
+<div id='numbooks'>You have <%=user.library.length%> books!</div>
 
+<div id='sortby'>
 <label>Sort By:
   <select name="Sort By">
     <option value="Title">Title</option>
     <option value="Author">Author</option>
   </select>
 </label>
+</div>
 
 <div id='lib'>
 <table id='libtable'>

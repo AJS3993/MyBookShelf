@@ -3,6 +3,9 @@
 
 
   <h1>Expand Your Library</h1>
+  
+  <div id='lib'>
+  
   <form id ='addbook' action="../users/library" method="POST">
 
     <label>Title:
@@ -12,7 +15,7 @@
       
       <label>Author:
         <input type="text" name="Author">
-      </label><br>
+      </label><br><br>
     
     <label>Group:
       <select name="Group">
@@ -20,10 +23,12 @@
         <option value="To Read">To Read</option>
         <option value="Read">Read</option> 
       </select>
-    </label><br>
+    </label><br><br><br>
     
     
     <input type="submit" value="Add Book">
   </form>
+
+</div>
 
   <%- include('../partials/footer') %>
