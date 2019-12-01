@@ -22,10 +22,6 @@ function create(req, res) {
 
 console.log('users create')
 
-  var user = new User(req.body);
-  user.save(function(err) {
-    if (err) return res.render('/new');
-    console.log(user);
 
     req.user.library.push(req.body);
     req.user.save().then(function(err) {
@@ -34,7 +30,7 @@ console.log('users create')
 
     res.redirect('../users/library');
   })
-})}
+}
 
 
 
