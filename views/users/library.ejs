@@ -2,13 +2,23 @@
     
 <h1>Library Page</h1>
 
+<h2>You have # books!</h2>
+
+<label>Sort By:
+  <select name="Sort By">
+    <option value="Title">Title</option>
+    <option value="Author">Author</option>
+  </select>
+</label>
+
 <div id='lib'>
 <table id='libtable'>
-<thead>
+<thead id='libthead'>
   <th></th>
   <th>Title</th>
   <th>Author</th>
   <th>Group</th>
+  <th></th>
   <!-- <th>Favorite</th> -->
 </thead>
 <% user.library.forEach(function(u){ %>
@@ -20,8 +30,12 @@
       <td><%= u.Title %></td>
       <td><%= u.Author %></td>
       <td><%= u.Group %></td>
-      <!-- <td><a href="/users/<%= user._id %>"  id="details">DETAILS</a></td> -->
+      <td><a href="/users/library/<%= u._id %>"  id="details">DETAILS</a></td>
+
   </tr>
+
+  
+
 <% }) %>
 </table>
 </div>

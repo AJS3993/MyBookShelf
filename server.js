@@ -8,7 +8,7 @@ var passport = require('passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// var libraryRouter = require('./routes/library');
+var libraryRouter = require('./routes/library');
 var settingsRouter = require('./routes/settings');
 var methodOverride = require('method-override');
 
@@ -39,9 +39,10 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 
-app.use('/users', usersRouter);
+app.use('/users', libraryRouter);
 app.use('/users', settingsRouter);
-// app.use('/users', libraryRouter);
+app.use('/users', usersRouter);
+
 
 
 // catch 404 and forward to error handler
