@@ -28,7 +28,7 @@ console.log('users create')
     console.log(user);
 
     req.user.library.push(req.body);
-    req.user.save(function(err) {
+    req.user.save().then(function(err) {
 
 
 
@@ -43,17 +43,17 @@ function show(req, res){
     res.render('users/library', {user: req.user});
   }
 
+
   function deleteBook(req, res) {
-    console.log('users delete')
-      User.deleteOne(function(err) {
-      res.redirect(`/users/library`);
-    })
-  }
+    
+    var id = req.params.id
+    
+    User.findOne({"library._id": id}, function(err, user) {
+      user.library.id(id).remove();
+      user.save();
+    res.redirect(`/users/library`);
   
-  // function deleteFlight(req, res) {
-  //   Flight.findById(req.params.id, function(err, flight){
-  //   flight.deleteOne(function(err) {
-  //     res.redirect(`/flights/`);
-  //   })
-  // })
-  // }
+  })}
+    
+
+  

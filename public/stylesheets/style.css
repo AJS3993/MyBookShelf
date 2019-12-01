@@ -1,5 +1,6 @@
 body{
-  background-image: url("https://wallpaperaccess.com/full/832901.jpg");
+  /* background-image: url("https://wallpaperaccess.com/full/832901.jpg"); */
+  background-color: blue;
   background-size: cover;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0;
@@ -38,10 +39,11 @@ h1 {
   text-align: center;
 }
 
+
 #libtable{
   text-align: center;
   position: fixed;
-  top: 50%;
+  top: 35%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);

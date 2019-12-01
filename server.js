@@ -38,8 +38,9 @@ app.use(passport.session());
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/users', settingsRouter);
+
 app.use('/users', usersRouter);
+app.use('/users', settingsRouter);
 // app.use('/users', libraryRouter);
 
 
