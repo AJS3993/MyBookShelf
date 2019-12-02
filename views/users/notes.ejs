@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+
+<br><p class='noteheading'><%= book.Author%>, <%= book.Title%></p>
+<p class='noteheading'>Notes</p>
+
+
+<form id ='addbook' action="../users/library" method="POST"></form>
+
+
+  <textarea id='textarea' rows="10" cols="30"></textarea>
+
+  
+<input id='noteinput' type="submit" value="Save Note">
+
+</form>
+
+<%- include('../partials/footer') %>

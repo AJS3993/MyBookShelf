@@ -11,6 +11,9 @@ var librarySchema = new mongoose.Schema({
   Group: {
     type: String,
     enum: ['Favorite', 'To Read', 'Read']
+  },
+  Rating: {
+    type: String
   }
 })
 

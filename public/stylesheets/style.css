@@ -39,14 +39,22 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
 
 #libtable{
   text-align: center;
   position: fixed;
-  top: 15%;
+  top: 10%;
   left: 50%;
   /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   width: 80%;
   font-size: 15px;
 }
@@ -62,6 +70,7 @@ h1 {
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
   border-radius: 25px;
+  overflow: hidden;
 }
 
 #addbook {
@@ -95,3 +104,41 @@ th{
   text-align: right;
 }
 
+#numbooks{
+  margin-left: 15%;
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+#sortby{
+  margin-right: 15%;
+  margin-top: -2%;
+}
+
+.noteheading{
+  text-align: center;
+  font-size: 30px;
+}
+
+textarea{
+  background-color: rgba(255, 255, 255, 0.8); 
+  display: table;
+  position: fixed;
+  height: 55%;
+  width: 75%;
+  top: 60%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+#noteinput{
+  background-color: rgba(255, 255, 255, 0.8); 
+  display: table;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}

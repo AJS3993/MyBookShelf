@@ -2,7 +2,7 @@
     
 <h1>Library Page</h1>
 
-<div id='numbooks'>You have <%=user.library.length%> books!</div>
+<div id='numbooks'>Number of Books: <%=user.library.length%></div>
 
 <div id='sortby'>
 <label>Sort By:
@@ -20,6 +20,7 @@
   <th>Title</th>
   <th>Author</th>
   <th>Group</th>
+  <th>Rating</th>
   <th></th>
   <!-- <th>Favorite</th> -->
 </thead>
@@ -32,6 +33,7 @@
       <td><%= u.Title %></td>
       <td><%= u.Author %></td>
       <td><%= u.Group %></td>
+      <td><%= u.Rating %></td>
       <td><a href="/users/library/<%= u._id %>"  id="details">DETAILS</a></td>
 
   </tr>

@@ -3,9 +3,15 @@
 
 <h1><%= book.Title%></h1><br>
 
-<h2><%= book.Author%></h2>
+<h2><%= book.Author%></h2><br>
 
-<h3><%= book.Group%></h3>
+<h3><%= book.Group%></h3><br>
+
+<h3>Rating: <%= book.Rating%>/5</h3><br>
+
+<h3><a href="/users/notes/<%= book._id %>">Notes</a></h3>
+
+</form>
 
 
 <%- include('../partials/footer') %>
