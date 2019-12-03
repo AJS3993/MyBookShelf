@@ -22,10 +22,12 @@ function create(req, res) {
 
 console.log('users create')
 
+for (let key in req.body) {
+  if (req.body[key] === '') delete req.body[key];
+}
 
     req.user.library.push(req.body);
     req.user.save().then(function(err) {
-
 
 
     res.redirect('../users/library');

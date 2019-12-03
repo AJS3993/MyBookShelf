@@ -61,16 +61,17 @@ h3 {
 
 #lib{
   background-color: rgba(40, 53, 42, 0.8); 
-  display: table;
+  /* display: table; */
   position: fixed;
-  height: 60%;
+  height: 50%;
   width: 75%;
-  top: 65%;
+  top: 70%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
   border-radius: 25px;
-  overflow: hidden;
+  overflow-y: auto;
+
 }
 
 #addbook {
@@ -141,4 +142,45 @@ textarea{
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
+}
+
+#topdiv{
+  /* display: table; */
+  position: fixed;
+  height: 60%;
+  width: 75%;
+  top: 65%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+#toptable{
+  text-align: center;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 0%);
+  width: 62%;
+  font-size: 15px;
+  margin:0;
+  padding: 0;
+}
+
+#newbookDiv{
+  background-color: rgba(40, 53, 42, 0.8); 
+  /* display: table; */
+  position: fixed;
+  height: 70%;
+  width: 75%;
+  top: 60%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  overflow-y: auto;
 }

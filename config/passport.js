@@ -15,11 +15,11 @@ passport.use(new GoogleStrategy({
           return cb(null, user);
         } else {
           // we have a new user via OAuth!
+          console.log("HELLO I am the profile", profile)
           var newUser = new User({
             name: profile.displayName,
             email: profile.emails[0].value,
             googleId: profile.id
-       
           });
           newUser.save(function(err) {
             if (err) return cb(err);

@@ -3,10 +3,12 @@ var mongoose = require('mongoose');
 
 var librarySchema = new mongoose.Schema({
   Title: {
-    type: String
+    type: String,
+    default: 'Untitled'
   },
   Author: {
-    type: String
+    type: String,
+    default: 'Unknown'
   },
   Group: {
     type: String,
@@ -14,8 +16,10 @@ var librarySchema = new mongoose.Schema({
   },
   Rating: {
     type: String
-  }
+  },
+  note: {type: String}
 })
+
 
 
 var userSchema = new mongoose.Schema({

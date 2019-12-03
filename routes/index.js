@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 
 router.get('/auth/google', passport.authenticate(
     'google',
-    { scope: ['profile', 'email'] }
+    { scope: ['profile', 'email'] } // what your application is allowed to access
   ));
   
   router.get('/oauth2callback', passport.authenticate(

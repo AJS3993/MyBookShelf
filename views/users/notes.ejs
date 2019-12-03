@@ -5,14 +5,14 @@
 <p class='noteheading'>Notes</p>
 
 
-<form id ='addbook' action="../users/library" method="POST"></form>
+<h1>notes: <%= book.note%></h1>
 
 
-  <textarea id='textarea' rows="10" cols="30"></textarea>
-
-  
-<input id='noteinput' type="submit" value="Save Note">
-
+<form id ='addnote' action="/users/notes?_method=PUT" method="POST">
+    <label>note:
+    <textarea rows="4" cols="5"></textarea>
+</label>
+<input type="submit" value="Add Note">
 </form>
 
 <%- include('../partials/footer') %>
