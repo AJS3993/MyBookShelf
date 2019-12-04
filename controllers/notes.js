@@ -44,10 +44,16 @@ function index(req, res) {
             req.body._id = id;
       
             user.library[idx]._id = id,
-            user.library[idx].note = req.body.note
+            user.library[idx].note.push(req.body)
+            
+
+            user.library[idx].note.forEach(function(obj){
+              obj.noteinfo.push(obj.note);
+              console.log(obj.note)
+
             user.save().then(
       res.redirect('/users/notes/update')
-        )}})})}
+        )})}})})}
      
 
       function edit(req, res) {
