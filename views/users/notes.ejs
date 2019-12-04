@@ -2,17 +2,17 @@
 
 
 <br><p class='noteheading'><%= book.Author%>, <%= book.Title%></p>
-<p class='noteheading'>Notes</p>
+<p class='noteheading'>Comment</p>
 
 
-<h1>notes: <%= book.note%></h1>
+<h1><%= book.note%></h1>
 
 
-<form id ='addnote' action="/users/notes?_method=PUT" method="POST">
-    <label>note:
-    <textarea rows="4" cols="5"></textarea>
-</label>
-<input type="submit" value="Add Note">
+<form id ='addnote' action="/users/notes/update?_method=PUT" method="POST">
+
+    <textarea name='note' rows="4" cols="5"></textarea>
+
+<input id='addnoteinput' type="submit" value="Add Comment">
 </form>
 
 <%- include('../partials/footer') %>

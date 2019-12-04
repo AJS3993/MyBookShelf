@@ -184,3 +184,18 @@ textarea{
   border-radius: 25px;
   overflow-y: auto;
 }
+
+textarea{
+  width: 75%;
+  height: 30%;
+}
+
+#addnote{
+  text-align: center;
+}
+
+#addnoteinput{
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 82%;
+}

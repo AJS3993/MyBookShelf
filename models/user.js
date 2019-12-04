@@ -17,8 +17,9 @@ var librarySchema = new mongoose.Schema({
   Rating: {
     type: String
   },
-  note: {type: String}
-})
+  note: {type: String
+  }
+  })
 
 
 
@@ -28,5 +29,8 @@ var userSchema = new mongoose.Schema({
   googleId: {type: String},
   library: [librarySchema]
 });
+
+
+
 
 module.exports = mongoose.model('User', userSchema);
