@@ -1,11 +1,6 @@
 var mongoose = require('mongoose');
 
 
-var notesSchema = new mongoose.Schema({
-  note: {type: String},
-  noteinfo: {type: Array}
-})
-
 var librarySchema = new mongoose.Schema({
   Title: {
     type: String,
@@ -22,7 +17,8 @@ var librarySchema = new mongoose.Schema({
   Rating: {
     type: String
   },
-  note: [notesSchema]
+  note: {type: String
+  }
   })
 
 
@@ -33,8 +29,6 @@ var userSchema = new mongoose.Schema({
   googleId: {type: String},
   library: [librarySchema]
 });
-
-
 
 
 module.exports = mongoose.model('User', userSchema);

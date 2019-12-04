@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var settingsSchema = new mongoose.Schema({
-    sortby: {type: Boolean},
+    theme: {type: Boolean},
   });
 
 

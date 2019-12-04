@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
 var libraryRouter = require('./routes/library');
 var settingsRouter = require('./routes/settings');
 var notesRouter = require('./routes/notes');
+var notepadRouter = require('./routes/notepad');
 var methodOverride = require('method-override');
 
 require('dotenv').config();
@@ -20,9 +21,16 @@ var app = express();
 require('./config/database');
 require('./config/passport');
 
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); // `/Users/andrewsmith/code/MyBookShelf/views`
 app.set('view engine', 'ejs');
+
+app.use(function(req, res, next) {
+  req.time = new Date().toLocaleTimeString();
+  next();
+});
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -44,6 +52,7 @@ app.use('/users', libraryRouter);
 app.use('/users', settingsRouter);
 app.use('/users', usersRouter);
 app.use('/users', notesRouter);
+app.use('/users', notepadRouter);
 
 
 // catch 404 and forward to error handler

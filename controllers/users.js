@@ -3,7 +3,6 @@ var User = require('../models/user');
 module.exports = {
   index,
   new: newBook,
-  show,
   create,
   delete: deleteBook
 };
@@ -36,10 +35,6 @@ for (let key in req.body) {
 
 
 
-function show(req, res){
-  console.log('users show')
-    res.render('users/library', {user: req.user});
-  }
 
 
   function deleteBook(req, res) {

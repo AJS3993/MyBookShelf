@@ -3,9 +3,9 @@ var User = require('../models/user');
 module.exports = {
   index,
   show,
-  new: newNotes,
-  update,
-  edit
+  // new: newNotes,
+  update
+  // edit
 };
 
 function index(req, res) {
@@ -28,10 +28,10 @@ function index(req, res) {
   }
   
 
-    function newNotes(req, res) {
-        console.log('notes newNotes')
-       res.render('users/notes/new');
-     }
+    // function newNotes(req, res) {
+    //     console.log('notes newNotes')
+    //    res.render('users/notes/new');
+    //  }
 
 
      function update(req, res) {
@@ -44,21 +44,14 @@ function index(req, res) {
             req.body._id = id;
       
             user.library[idx]._id = id,
-            user.library[idx].note.push(req.body)
-            
-
-            user.library[idx].note.forEach(function(obj){
-              obj.noteinfo.push(obj.note);
-              console.log(obj.note)
-
+            user.library[idx].note = req.body.note
             user.save().then(
       res.redirect('/users/notes/update')
-        )})}})})}
-     
+        )}})})}
 
-      function edit(req, res) {
-        console.log('notes edit')
-        res.render('notes/edit', {
-          idx: req.params.id
-        });
-      }
+      // function edit(req, res) {
+      //   console.log('notes edit')
+      //   res.render('notes/edit', {
+      //     idx: req.params.id
+      //   });
+      // }
