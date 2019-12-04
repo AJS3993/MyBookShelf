@@ -55,7 +55,7 @@ h3 {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, 0%);
-  width: 80%;
+  width: 90%;
   font-size: 15px;
 }
 
@@ -71,7 +71,6 @@ h3 {
   transform: translate(-50%, -50%);
   border-radius: 25px;
   overflow-y: auto;
-
 }
 
 #addbook {
@@ -98,6 +97,10 @@ tr.books:hover{
 }
 
 th{
+  font-size: 25px;
+}
+
+th.u{
   text-decoration: underline;
 }
 
@@ -165,7 +168,7 @@ textarea{
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, 0%);
-  width: 62%;
+  width: 90%;
   font-size: 15px;
   margin:0;
   padding: 0;
@@ -198,4 +201,15 @@ textarea{
   position: fixed;
   transform: translate(-50%, -50%);
   top: 82%;
+  left:48%;
+}
+
+td{
+  margin:0px;
+  width: 5%;
+}
+
+hr{
+  background-color: black;
+  width: 70%;
 }
