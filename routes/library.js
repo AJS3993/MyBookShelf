@@ -2,7 +2,7 @@
 var libraryCtrl = require('../controllers/library');
 
 
-// router.get('/library', libraryCtrl.index);
+router.get('/library', libraryCtrl.index);
 router.get('/library/:id', libraryCtrl.show);
 
 

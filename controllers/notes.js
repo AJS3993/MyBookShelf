@@ -10,7 +10,7 @@ module.exports = {
 
 function index(req, res) {
     console.log('notes index')
-    res.render('users/notes');
+    res.render('users/notes', {user: req.user});
    }
 
    function show(req, res){
@@ -24,7 +24,7 @@ function index(req, res) {
     * @param { Object } 2 : is local variables that the view needs to render!!!
     * @param { Function } 3 : callback function "this is rare"
     */ 
-    res.render('users/notes', book);  // the actual path is /Users/andrewsmith/code/MyBookShelf/views/users/notes
+    res.render('users/notes', {user: req.user});  // the actual path is /Users/andrewsmith/code/MyBookShelf/views/users/notes
   }
   
 
@@ -46,7 +46,7 @@ function index(req, res) {
             user.library[idx]._id = id,
             user.library[idx].note = req.body.note
             user.save().then(
-      res.redirect(`back`)
+      res.redirect('/users/notes/update')
         )}})})}
      
 

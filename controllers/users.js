@@ -15,7 +15,7 @@ function index(req, res) {
  
  function newBook(req, res) {
    console.log('users newbook')
-  res.render('users/new');
+  res.render('users/new', {user: req.user});
 }
 
 function create(req, res) {

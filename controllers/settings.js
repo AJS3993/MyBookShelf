@@ -8,7 +8,7 @@ module.exports = {
   
   function index(req, res) {
     console.log('settings index')
-    res.render('users/settings');
+    res.render('users/settings', {user: req.user});
    }
 
    function show(req, res){
