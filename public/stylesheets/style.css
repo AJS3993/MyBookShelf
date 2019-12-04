@@ -256,3 +256,8 @@ hr{
   overflow-y: auto;
   border: 2px solid rgb(255, 255, 255);
 }
+#logo{
+  position: fixed;
+  transform: translate(-280%, -205%);
+  
+}
