@@ -1,17 +1,18 @@
 <%- include('../partials/header') %>
 
 
-<h1><%= book.Title%></h1><br>
+<h2><%= book.Title%></h2><br>
 
 <h2><%= book.Author%></h2><br>
+
+<hr>
 
 <h3><%= book.Group%></h3><br>
 
 <h3>Rating: <%= book.Rating%>/5</h3><br>
 
-<h3>edit book</h3>
 
-<h1><%= book.note%></h1>
+<h2><%= book.note%></h2>
 
 <h3><a href="/users/notes/<%= book._id %>">New Comment</a></h3>
 

@@ -10,20 +10,21 @@
 </head>
 
 <body>
-  <nav>
+  <nav id='firstnav'>
     <h1 id='heading'>My Book Shelf</h1>
   </nav>
 
-  <h1>Landing Page</h1>
 
       <div id="login">
     
         <% if (user) { %>
-          <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+        <a href="/logout">Log Out</a>
         <% } else { %>
-          <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+          <a href="/auth/google">Login with Google</a>
         <% } %>
       
       </div>
-    
+<!-- <div id='logo'>
+     <img src="https://i.imgur.com/mwMDZb7.png" title="source: imgur.com" height='85%' width="85%"/>
+  </div>  -->
     <%- include('../partials/footer') %>
