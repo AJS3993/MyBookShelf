@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
     
 
-<div id='numbooks'>Number of Books: <%=user.library.length%></div>
+<div id='numbooks'>Books: <%=user.library.length%></div>
 
 <div id='sortby'>
 <label>Sort By:
@@ -16,12 +16,14 @@
 <div id='topdiv'>
   <table id='toptable'>
   <thead id='topthead'>
+    <th></th>
     <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
     <th class='u'>Title</th>
     <th class='u'>Author</th>
     <th class='u'>Group</th>
     <th class='u'>Rating</th>
     <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th></th>
     </thead>
   </table>
 </div>
@@ -43,13 +45,17 @@
   <tr class='books'>
       <td><form id ='deletebook' action="/users/library/<%= u._id %>?_method=DELETE"
          method="POST">
-        <button type="submit">X</button>
+        <button class="btn btn-outline-danger" type="submit">X</button>
       </form></td>
       <td><%= u.Title %></td>
       <td><%= u.Author %></td>
       <td><%= u.Group %></td>
       <td><%= u.Rating %></td>
-      <td><a href="/users/library/<%= u._id %>"  id="details">DETAILS</a></td>
+
+      <td><form id ='details' action="/users/library/<%= u._id %>">
+       <button class="btn btn-outline-light" type="submit">DETAILS</button>
+     </form></td>
+
 
   </tr>
 
