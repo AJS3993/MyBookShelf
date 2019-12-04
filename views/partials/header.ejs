@@ -15,32 +15,38 @@
  
     <nav>
       
-        <div id='logo'><img src="https://i.imgur.com/8RcpB74.png" title="source: imgur.com" /></div>
-      
-        <table id='navtable'>
+       
           <thead>
-
+<th> <div id='logo'><img src="https://i.imgur.com/8RcpB74.png" title="source: imgur.com" /></div>
+  <table id='navtable'></th>
             <th>
-              <a href="/users/library"><img src="https://www.pngkey.com/png/full/208-2085400_library-icon-college-life-png-icon.png"width="62" height="62"></a>
+                <form id ='library' action="/users/library">
+                  <button class="btn btn-outline-light" type="submit">LIBRARY</button>
+                </form>
             </th>
             <th>
-              <a href="/users/new"><img src="https://icon-library.net/images/book-icon-file/book-icon-file-28.jpg"width="58" height="58"></a>
+                <form id ='addbooklink' action="/users/new">
+                  <button class="btn btn-outline-light" type="submit">ADD BOOK</button>
+                </form>
             </th>
             <th>
-               <a href="/users/settings"><img src="https://cdn1.iconfinder.com/data/icons/mobile-device/512/settings-option-configurate-gear-blue-round-512.png"width="60" height="60"></a>
+                <form id ='settingslink' action="/users/settings">
+                  <button class="btn btn-outline-light" type="submit">SETTINGS</button>
+                </form>
            </th>
+
+           <th> <% if (user) { %>
+            <a href="/logout" class="btn btn-outline-danger" width="35"> Logout </a>
+          <% } else { %>
+            <a href="/auth/google" class="btn btn-outline-light" width="35">Login with Google</a>
+          <% } %></th>
+          
         </thead>
-        <tr> 
-          <td class='navtd'><a href="/users/library">Library</a></td>
-          <td class='navtd'><a href="/users/new">Add Book</a></td>
-          <td class='navtd'><a href="/users/settings">Settings</a></td>
-        </tr>
+       
         
       </table>
       
     </nav>
-    <% if (user) { %>
-      <a href="/logout" class="btn btn-outline-danger" width="35"> Logout </a>
-    <% } else { %>
-      <a href="/auth/google" class="btn btn-outline-light" width="35">Login with Google</a>
-    <% } %>
+   
+
+  

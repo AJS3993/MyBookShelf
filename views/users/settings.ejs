@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
     
-<h1>Settings Page</h1>
+<br> <br> <br> <br> <br> <br> <br><h1>Settings</h1>
 
 <div id='newbookDiv'>
 
@@ -11,6 +11,18 @@
         </select>
       </label>
 
+      <button type="button" onclick="myFunction()">Red Theme</button>
+
+      <script>
+      function myFunction() {
+          document.body.style.backgroundColor = "maroon";
+          document.getElementById('newbookDiv').style.backgroundColor = "rgb(70, 0, 0)";
+          document.getElementsByTagName('nav').style.backgroundColor = "rgb(70, 0, 0)";
+      }
+      </script>
+
 </div>
+
+
 
  <%- include('../partials/footer') %>
