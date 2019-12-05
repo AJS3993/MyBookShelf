@@ -1,9 +1,12 @@
 <%- include('../partials/header') %>
 
+<br><br><br><br><br><br><br>
+
 <h2>Note Pad</h2>
  
 <% notes.forEach(function(note){ %>
 
+  <br>
   <div class='fullnote'>
       
       <form action="/users/notepad/<%= note._id %>?_method=DELETE"
@@ -15,18 +18,19 @@
        
         <h1><%= note.date %></h1>
 
-        <td><a href="/users/notepad/<%= note._id %>"  id="details">EDIT</a></td>
       </div>
+      <br>
+      
 <% }) %>
   
-<br><br><br><br><br><br>
+<br><br><br>
   
 <%if (notes.length <= 0) { %>
     <h1><%= msg %></h1> 
      <% } %>
 
      <form action="/users/notepad" method="POST" autocomplete="off">
-      <input type="text" name="todo">
+      <textarea id = 'notepadbottom' name='note' rows="3" cols="5"></textarea>
       <button type="submit">Add Note</button>
     </form>
 

@@ -4,8 +4,26 @@ module.exports = {
   index,
   new: newBook,
   create,
-  delete: deleteBook
+  delete: deleteBook,
+  edit,
+  update,
+  show
 };
+
+function update(req, res) {
+  console.log('users update')
+  User.findByIdAndUpdate(req.params.id, req.body)
+  res.redirect(`/users/edit`);
+}
+
+function edit(req, res) {
+  console.log('users edit')
+   User.find({}, function(err, book) {
+  res.render('users/edit', {
+    book,
+    idx: req.params.id
+  });
+})}
 
 function index(req, res) {
   console.log('users index')
@@ -44,5 +62,14 @@ for (let key in req.body) {
   
   })}
     
+  function show(req, res) {
+    console.log('show')
+    var id = req.params.id;
 
-  
+    User.findOne({"library._id": id}, function(err, user) {
+   
+     book = user.library.id(id)
+    
+     res.render('users/edit', {
+     book, user: req.user
+    })})}

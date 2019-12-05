@@ -202,7 +202,8 @@ textarea{
 
 textarea{
   width: 75%;
-  height: 40%;
+  height: 30%;
+  border: 4px solid rgb(47, 51, 61);
 }
 
 #addnote{
@@ -273,9 +274,14 @@ hr{
 .fullnote {
   background-color: rgb(47, 51, 61);
   /* display: table; */
- 
   /* bring your own prefixes */
   border-radius: 5px;
   overflow-y: auto;
   border: 2px solid rgb(255, 255, 255);
+  margin: 10px;
+  height: 150px;
+}
+
+#notepadbottom{
+  bottom: 10px;
 }
