@@ -269,3 +269,13 @@ hr{
   position: fixed;
   transform: translate(-350%, -205%);
 }
+
+.fullnote {
+  background-color: rgb(47, 51, 61);
+  /* display: table; */
+ 
+  /* bring your own prefixes */
+  border-radius: 5px;
+  overflow-y: auto;
+  border: 2px solid rgb(255, 255, 255);
+}

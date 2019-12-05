@@ -20,15 +20,18 @@ function index(req, res) {
   });
 })}
 
+
 function deleteNote(req, res) {
-  console.log('delete notepad')
-  Note.deleteOne(req.params.id);
-  res.redirect('/');
+  Note.findById(req.params.id, function(err, note){
+  note.deleteOne(function(err) {
+    res.redirect(`/users/notepad/`);
+  })
+})
 }
 
 function create(req, res) {
   console.log('create')
   req.body.done = false;
   Note.create(req.body);
-  res.redirect('/');
+  res.redirect('/users/notepad');
 }

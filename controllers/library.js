@@ -11,7 +11,7 @@ function index(req, res) {
 
 
 function show(req, res){
-
+console.log('library show')
   var id = req.params.id;
   console.log(id)
   User.findOne({"library._id": id}, function(err, user) {

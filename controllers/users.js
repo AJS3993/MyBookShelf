@@ -33,10 +33,6 @@ for (let key in req.body) {
   })
 }
 
-
-
-
-
   function deleteBook(req, res) {
     
     var id = req.params.id

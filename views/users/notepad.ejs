@@ -3,24 +3,31 @@
 <h2>Note Pad</h2>
  
 <% notes.forEach(function(note){ %>
-    <div class='fullnote'>
+
+  <div class='fullnote'>
       
       <form action="/users/notepad/<%= note._id %>?_method=DELETE"
            method="POST">
           <button type="submit">X</button>
         </form>
         
-        <p><%= note.body %></p>
+        <h1><%= note.body %></h1>
        
-        <p><%= note.date %></p>
+        <h1><%= note.date %></h1>
 
         <td><a href="/users/notepad/<%= note._id %>"  id="details">EDIT</a></td>
       </div>
 <% }) %>
-  </table>
+  
 <br><br><br><br><br><br>
-  <%if (notes.length <= 0) { %>
-    <h1><%= msg%></h1> 
+  
+<%if (notes.length <= 0) { %>
+    <h1><%= msg %></h1> 
      <% } %>
+
+     <form action="/users/notepad" method="POST" autocomplete="off">
+      <input type="text" name="todo">
+      <button type="submit">Add Note</button>
+    </form>
 
 <%- include('../partials/footer') %>

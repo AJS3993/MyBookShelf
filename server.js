@@ -50,9 +50,10 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/users', libraryRouter);
 app.use('/users', settingsRouter);
+app.use('/users', notepadRouter);
 app.use('/users', usersRouter);
 app.use('/users', notesRouter);
-app.use('/users', notepadRouter);
+
 
 
 // catch 404 and forward to error handler
