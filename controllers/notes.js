@@ -46,7 +46,7 @@ function index(req, res) {
             user.library[idx]._id = id,
             user.library[idx].note = req.body.note
             user.save().then(
-      res.redirect('/users/notes/update')
+      res.redirect(`/users/library/${id}`)
         )}})})}
 
       // function edit(req, res) {

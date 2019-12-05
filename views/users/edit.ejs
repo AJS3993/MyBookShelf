@@ -6,7 +6,7 @@
   
   <div id='newbookDiv'>
   
-  <form id ='addbook' action="../users/library" method="POST">
+  <form id ='addbook' action="../a?_method=PUT" method="POST">
 
     <label>Title:
         <input type="text" name="Title" value="<%= book.Title %>">
@@ -37,7 +37,7 @@
     </label><br>
     
     
-    <input type="submit" value="Add Book">
+    <input type="submit" value="Update Book">
   </form>
 
 </div>

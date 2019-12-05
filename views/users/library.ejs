@@ -1,16 +1,17 @@
 <%- include('../partials/header') %>
     
-<br><br><br>
-<div id='numbooks'>Books: <%=user.library.length%></div>
+<br><br><br><br><br><br>
+<h1>Your Library</h1>
+<h3><%=user.library.length%> Books</h3>
 
-<div id='sortby'>
+<!-- <div id='sortby'>
 <label>Sort By:
   <select name="Sort By">
     <option value="Title">Title</option>
     <option value="Author">Author</option>
   </select>
 </label>
-</div>
+</div> -->
 
 
 <div id='topdiv'>
@@ -23,6 +24,7 @@
     <th class='u'>Group</th>
     <th class='u'>Rating</th>
     <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
     <th></th>
     </thead>
   </table>
@@ -38,6 +40,7 @@
   <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
   <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
   <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
   <th></th>
   
 </thead>
@@ -56,7 +59,7 @@
        <button class="btn btn-outline-light" type="submit">DETAILS</button>
      </form></td>
 
-     <td><a href="/users/library/<%= u._id %>/edit">Edit</a></td>
+     <td><form action="/users/edit/<%= u._id %>"><button class="btn btn-outline-primary" type="submit">EDIT</button></form></td>
 
 
 

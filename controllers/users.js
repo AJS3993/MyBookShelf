@@ -6,15 +6,10 @@ module.exports = {
   create,
   delete: deleteBook,
   edit,
-  update,
   show
 };
 
-function update(req, res) {
-  console.log('users update')
-  User.findByIdAndUpdate(req.params.id, req.body)
-  res.redirect(`/users/edit`);
-}
+
 
 function edit(req, res) {
   console.log('users edit')

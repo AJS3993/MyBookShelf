@@ -4,11 +4,11 @@ var usersCtrl = require('../controllers/users');
 
 router.get('/', usersCtrl.index);
 router.get('/new', usersCtrl.new);
-router.get('/library/:id/edit', usersCtrl.show);
+router.get('/edit/:id', usersCtrl.show);
 router.post('/:id', usersCtrl.create);
 router.delete('/library/:id', usersCtrl.delete);
-router.get('/library/:id/edit', usersCtrl.edit);
-router.put('/library/:id/edit', usersCtrl.update);
+router.get('/library/:id', usersCtrl.edit);
+
 
 
 
