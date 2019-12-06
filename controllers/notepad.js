@@ -11,14 +11,14 @@ function index(req, res) {
   console.log('index notepad')
 
   Note.find({}, function(err, notes) {
-
+console.log(notes)
   res.render('users/notepad', {
     notes,
     time: req.time,
     msg,
     user: req.user
   });
-})}
+})} 
 
 
 function deleteNote(req, res) {
