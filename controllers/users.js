@@ -52,8 +52,11 @@ for (let key in req.body) {
     
     User.findOne({"library._id": id}, function(err, user) {
       user.library.id(id).remove();
+      
+      
       user.save();
-    res.redirect(`/users/library`);
+    
+      res.redirect(`/users/library`);
   
   })}
     
