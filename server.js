@@ -12,6 +12,7 @@ var libraryRouter = require('./routes/library');
 var settingsRouter = require('./routes/settings');
 var notesRouter = require('./routes/notes');
 var notepadRouter = require('./routes/notepad');
+var aboutRouter = require('./routes/about');
 var methodOverride = require('method-override');
 
 require('dotenv').config();
@@ -53,6 +54,7 @@ app.use('/users', settingsRouter);
 app.use('/users', notepadRouter);
 app.use('/users', usersRouter);
 app.use('/users', notesRouter);
+app.use('/users', aboutRouter);
 
 
 

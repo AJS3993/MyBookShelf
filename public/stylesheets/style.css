@@ -185,7 +185,7 @@ textarea{
 textarea{
   width: 75%;
   height: 30%;
-  border: 4px solid rgb(47, 51, 61);
+  border: 4px solid rgb(50, 91, 194);;
 }
 
 #addnote{
@@ -227,7 +227,7 @@ hr{
 
 
 #commentDiv{
-  background-color: rgb(47, 51, 61);
+  background-color: rgb(50, 91, 194, 0.8);
   /* display: table; */
   position: fixed;
   height: 20%;
@@ -237,7 +237,7 @@ hr{
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
   overflow-y: auto;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
   font-size: 35px;
 }
 #logo{
@@ -263,7 +263,25 @@ hr{
 }
 
 #landingbody{
-  background-image: url("https://positiveroutines.com/wp-content/uploads/2018/12/stack-of-books-against-blue-background.jpg");
+  background-image: url("https://images.wallpaperscraft.com/image/cup_book_reading_114848_3840x2400.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
+.upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20%;
+  border-radius: 25px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgb(50, 91, 194);
+  text-align: center;
+}
