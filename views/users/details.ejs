@@ -1,18 +1,18 @@
 <%- include('../partials/header') %>
 
 
-<br><br><br><br><br><br><br><h2><%= book.Title%></h2><br>
+<h2 class="text-primary"><%= book.Title%></h2><br>
 
-<h2><%= book.Author%></h2><br>
+<h2 class="text-primary"><%= book.Author%></h2><br>
 
 <hr>
 
-<h3><%= book.Group%></h3><br>
+<h3 class="text-primary"><%= book.Group%></h3><br>
 
-<h3>Rating: <%= book.Rating%>/5</h3><br>
+<h3 class="text-primary">Rating: <%= book.Rating%>/5</h3><br>
 
 
-<div style='opacity:0.8' id='commentDiv'><%= book.note%></div>
+<div class="text-primary" style='opacity:0.8' id='commentDiv'><%= book.note%></div>
 
 <h3><a href="/users/notes/<%= book._id %>">Note</a></h3>
 

@@ -1,6 +1,7 @@
 body{
-  background-image: url("https://i.pinimg.com/originals/7d/0f/20/7d0f20daf3eeebfc5e38577ec9de7c65.jpg");
-  background-color: rgb(71, 77, 91);
+  /* background-image: url("https://images-platform.99static.com//3fk8xE3EbeJYpE2ksVwYs5cqnJo=/1201x145:2000x944/fit-in/500x500/filters:fill(white,true)/99designs-contests-attachments/83/83857/attachment_83857388"); */
+  
+  background-color: rgb(255, 255, 255);
   background-size: cover;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0;
@@ -10,22 +11,22 @@ body{
 
 
  nav {
-  background-image: linear-gradient( rgb(47, 51, 61), rgb(47, 51, 61));
-  border-bottom: 2px solid rgb(255, 255, 255);
-  position: fixed;
+  /* background-image: linear-gradient( rgb(47, 51, 61), rgb(47, 51, 61)); */
+  border-bottom: 2px solid rgb(0, 0, 0);
+  /* position: fixed;
   top: 0%;
   left: 0%;
   width: 100%;
-  height: 15%;
+  height: 15%; */
 }
 
 
-#navtable{
+/* #navtable{
   position: fixed;
   width: 80%;
   left: 20%;
   top: 4%;
-}
+} */
 
 a {
   opacity: 0.7;
@@ -37,52 +38,33 @@ a:hover {
 }
 
 
-.navtd {
+/* .navtd {
   text-align: center;
   position: relative;
   bottom: 6px;
-}
+} */
 
 h1 {
+  margin: 10px;
   text-align: center;
   font-size: 35px;
   color: rgb(255, 255, 255);
 }
 
 h2 {
+  margin: 10px;
   text-align: center;
 }
 
 h3 {
+  margin: 10px;
   text-align: center;
 }
 
 
-#libtable{
-  text-align: center;
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, 0%);
-  width: 90%;
-  font-size: 15px;
-}
 
-#lib{
-  background-color: rgb(47, 51, 61);
-  /* display: table; */
-  position: fixed;
-  height: 50%;
-  width: 75%;
-  top: 70%;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-  border-radius: 25px;
-  overflow-y: auto;
-  border: 2px solid rgb(255, 255, 255);
-}
+
+
 
 #addbook {
   text-align: center;
@@ -108,7 +90,7 @@ tr.books:hover{
 }
 
 th{
-  font-size: 25px;
+  font-size: 15px;
 }
 
 th.u{
@@ -186,7 +168,7 @@ textarea{
 }
 
 #newbookDiv{
-  background-color: rgb(47, 51, 61);
+  background-color: rgb(50, 91, 194);
   /* display: table; */
   position: fixed;
   height: 70%;
@@ -197,7 +179,7 @@ textarea{
   transform: translate(-50%, -50%);
   border-radius: 25px;
   overflow-y: auto;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
 }
 
 textarea{
@@ -218,10 +200,7 @@ textarea{
   left:48%;
 }
 
-td{
-  margin:0px;
-  width: 5%;
-}
+
 
 hr{
   background-color: black;
@@ -246,12 +225,7 @@ hr{
   height: 15%;
 }
 
-#login{
-  position: fixed;
-  transform: translate(-50%, -50%);
-  top: 82%;
-  left:50%;
-}
+
 #commentDiv{
   background-color: rgb(47, 51, 61);
   /* display: table; */
@@ -288,49 +262,8 @@ hr{
   bottom: 10px;
 }
 
-
-/* Shared */
-.loginBtn {
-  box-sizing: border-box;
-  position: relative;
-  /* width: 13em;  - apply for fixed size */
-  margin: 0.2em;
-  padding: 0 15px 0 46px;
-  border: none;
-  text-align: left;
-  line-height: 34px;
-  white-space: nowrap;
-  border-radius: 0.2em;
-  font-size: 25px;
-  color: #FFF;
-}
-.loginBtn:before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 34px;
-  height: 100%;
-}
-.loginBtn:focus {
-  outline: none;
-}
-.loginBtn:active {
-  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+#landingbody{
+  background-image: url("https://positiveroutines.com/wp-content/uploads/2018/12/stack-of-books-against-blue-background.jpg");
+  background-size: cover;
 }
 
-
-/* Google */
-.loginBtn--google {
-  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
-  background: #DD4B39;
-}
-.loginBtn--google:before {
-  border-right: #BB3F30 1px solid;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
-}
-.loginBtn--google:hover,
-.loginBtn--google:focus {
-  background: #E74B37;
-}

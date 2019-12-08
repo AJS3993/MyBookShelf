@@ -12,8 +12,10 @@
 </head>
 
 <body>
- 
-    <nav style='opacity:0.9'>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <!-- <nav style='opacity:0.9'>
       
        
           <thead>
@@ -51,7 +53,65 @@
         
       </table>
       
-    </nav>
+    </nav> -->
+
+
+    <nav class="navbar navbar-expand-lg  bg-primary">
+      <a class="navbar-brand" href="/users">MyBookShelf</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+         
+         
+          <li class="nav-item active">
+            <a class="nav-link" href="/users/library">Library <span class="sr-only">(current)</span></a>
+          </li>
+          
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Shelves
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Favorites</a>
+              <a class="dropdown-item" href="#">To Read</a>
+              <a class="dropdown-item" href="#">Read</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">+ Add Shelf</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/users/new">+ Add Book</a>
+          </li>
+         
+          <li class="nav-item">
+              <a class="nav-link" href="/users/notepad">Notepad</a>
+            </li>
+          
+        </ul>
+       
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="/users/settings">Settings</a>
+              </li>
+
+              <li class="nav-item">
+              <% if (user) { %>
+                <a class="nav-link" href="/logout" class="btn btn-outline-danger" width="35"> Logout </a>
+              <% } else { %>
+                <a class="nav-link" href="/auth/google" class="btn btn-outline-light" width="35">Login with Google</a>
+              <% } %>
+            </li>
+
+          </ul>
+        
+      </div>
+    </nav> 
+
    
 
   

@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
-<br><br><br><br><br><br><br>
 
-<h2>Note Pad</h2>
+
+<h2 class="text-primary">Note Pad</h2>
  
 <% notes.forEach(function(note){ %>
 
@@ -27,7 +27,7 @@
 <br><br><br>
   
 <%if (notes.length <= 0) { %>
-    <h1><%= msg %></h1> 
+    <h1 class="text-primary"><%= msg %></h1> 
      <% } %>
 
      <form action="/users/notepad" method="POST" autocomplete="off">

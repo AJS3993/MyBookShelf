@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
     
-<br><br><br><br><br><br>
-<h1>Your Library</h1>
-<h3><%=user.library.length%> Books</h3>
+
+<h1 class="text-primary">Your Library</h1>
+<p style ="text-align:center;"  class="text-primary"><%=user.library.length%> Books</p>
 
 <!-- <div id='sortby'>
 <label>Sort By:
@@ -14,61 +14,43 @@
 </div> -->
 
 
-<div id='topdiv'>
-  <table id='toptable'>
-  <thead id='topthead'>
-    <th></th>
-    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-    <th class='u'>Title</th>
-    <th class='u'>Author</th>
-    <th class='u'>Group</th>
-    <th class='u'>Rating</th>
-    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-    <th></th>
+<div class='container'>
+
+<table class="table table-striped table-light">
+    <thead>
+        
+      <tr>
+        <th></th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Shelf</th>
+        <th scope="col">Rating</th>
+        <th></th>
+        <th></th>
+      </tr>
     </thead>
+
+    <tbody>
+        <% user.library.forEach(function(u){ %>
+      <tr>
+        
+        <td><form id ='deletebook' action="/users/library/<%= u._id %>?_method=DELETE"
+          method="POST">
+         <button class="btn btn-outline-danger" type="submit">X</button>
+       </form></td>
+        <td><%= u.Title %></td>
+        <td><%= u.Author %></td>
+        <td><%= u.Group %></td>
+        <td><%= u.Rating %></td>
+        <td><form action="/users/edit/<%= u._id %>"><button class="btn btn-outline-primary" type="submit">EDIT</button></form></td>
+        <td><form id ='details' action="/users/library/<%= u._id %>">
+          <button class="btn btn-outline-dark" type="submit">DETAILS</button>
+        </form></td>
+
+      </tr>
+      <% }) %>
+    </tbody>
   </table>
-</div>
-
-
-
-<div id='lib' style='opacity:0.9'>
-<table id='libtable'>
-<thead id='libthead'>
-  <th></th>
-  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-  <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-  <th></th>
-  
-</thead>
-<% user.library.forEach(function(u){ %>
-  <tr class='books'>
-      <td><form id ='deletebook' action="/users/library/<%= u._id %>?_method=DELETE"
-         method="POST">
-        <button class="btn btn-outline-danger" type="submit">X</button>
-      </form></td>
-      <td><%= u.Title %></td>
-      <td><%= u.Author %></td>
-      <td><%= u.Group %></td>
-      <td><%= u.Rating %></td>
-
-      <td><form id ='details' action="/users/library/<%= u._id %>">
-       <button class="btn btn-outline-light" type="submit">DETAILS</button>
-     </form></td>
-
-     <td><form action="/users/edit/<%= u._id %>"><button class="btn btn-outline-primary" type="submit">EDIT</button></form></td>
-
-
-
-  </tr>
-
-  
-
-<% }) %>
-</table>
 </div>
 
 <%- include('../partials/footer') %>
