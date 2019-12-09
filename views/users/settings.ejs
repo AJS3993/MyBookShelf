@@ -3,6 +3,7 @@
 <h1 class="text-primary">Settings</h1>
 
 <div id='newbookDiv' style='opacity:0.9'>
+    <form id ='addbook' action="../a?_method=PUT" method="POST">
 
     <label>Sort Books By:
         <select name="Sort By">
@@ -11,15 +12,16 @@
         </select>
       </label>
 
-      <button type="button" onclick="redTheme()">Red Theme</button>
+      <br><br><br>
+<label>Theme:
+  <input type="radio" name="gender" value="male" checked>Light
+  <input type="radio" name="gender" value="female">Dark
+</label>
+      
+      <br><br><br>
 
-      <script>
-      function redTheme() {
-          document.body.style.backgroundColor = "maroon";
-          document.getElementById('newbookDiv').style.backgroundColor = "rgb(70, 0, 0)";
-          document.getElementsByTagName('nav').style.backgroundColor = "rgb(70, 0, 0)";
-      }
-      </script>
+<input type="submit" value="Save Settings" class="btn btn-outline-success">
+</form>
 
 </div>
 

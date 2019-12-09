@@ -6,7 +6,7 @@
 
 ## Purpose
 
-It can be hard to keep track of your books as you grow your own personal library. MyBookShelf is your own personal library tracker. Sort your books to help you remember which books you have read and which books you haven't.
+MyBookShelf is your own personal library tracker. Sort your books to help you remember which books you have read and which books you haven't.
 
 
 ## Instructions
