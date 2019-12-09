@@ -7,7 +7,8 @@ module.exports = {
 };
 
 function index(req, res) {
- res.render('users/library', {user: req.user});
+  var message = "Start Adding Books!"
+ res.render('users/library', {user: req.user, message});
  }
 
 

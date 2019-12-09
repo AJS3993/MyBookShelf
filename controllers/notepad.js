@@ -7,7 +7,7 @@ module.exports = {
 };
 
 function index(req, res) {
-  var msg = 'note'
+  var msg = 'no notes'
   console.log('index notepad')
 
   Note.find({}, function(err, notes) {

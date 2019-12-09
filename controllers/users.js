@@ -63,6 +63,7 @@ for (let key in req.body) {
     
   function show(req, res) {
     console.log('show')
+    var message = "You dont have any notes"
     var id = req.params.id;
 
     User.findOne({"library._id": id}, function(err, user) {
@@ -70,5 +71,5 @@ for (let key in req.body) {
      book = user.library.id(id)
     
      res.render('users/edit', {
-     book, user: req.user
+     book, user: req.user, message
     })})}
