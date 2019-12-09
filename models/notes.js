@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 
 var noteSchema = new mongoose.Schema([{
-    body  : String,
-    date  : Date
+    body  : String
 }]);
 
 module.exports = {

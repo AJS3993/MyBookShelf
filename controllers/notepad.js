@@ -7,7 +7,7 @@ module.exports = {
 };
 
 function index(req, res) {
-  var msg = "You dont have any notes"
+  var msg = 'note'
   console.log('index notepad')
 
   Note.find({}, function(err, notes) {
@@ -31,7 +31,7 @@ function deleteNote(req, res) {
 
 function create(req, res) {
   console.log('create')
-  req.body.done = false;
   Note.create(req.body);
+  console.log(req.body.note)
   res.redirect('/users/notepad');
 }

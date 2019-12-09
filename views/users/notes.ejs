@@ -1,8 +1,11 @@
 <%- include('../partials/header') %>
 
+<br>
+<p class='noteheading text-primary'><%= book.Author%>, <%= book.Title%></p>
 
-<p class='noteheading text-primary'><%= book.Author%>, <%= book.Title%></p><br>
-<p class='noteheading text-primary'>Note</p>
+<hr>
+
+<p class='noteheading text-primary'>Note:</p>
 
 
 
@@ -12,7 +15,11 @@
 
     <textarea name='note' rows="4" cols="5"></textarea>
 
-<input id='addnoteinput' type="submit" value="Change Note">
+<h3>
+    <button class="btn btn-outline-dark" type="submit">Change Note</button>
+  </h3>
 </form>
+
+
 
 <%- include('../partials/footer') %>

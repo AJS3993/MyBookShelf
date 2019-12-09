@@ -22,7 +22,8 @@ function edit(req, res) {
 
 function index(req, res) {
   console.log('users index')
-  res.render('users/index', {user: req.user});
+  var message = "You dont have any notes"
+  res.render('users/index', {user: req.user, message});
  }
  
  function newBook(req, res) {
